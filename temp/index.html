@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Clothing Exchange Dashboard</h1>
+
+        <!-- Authentication Section -->
+        <div id="auth">
+            <h2>Login / Sign Up</h2>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button id="auth-btn">Login</button>
+            <button id="signup-btn">Sign Up</button>
+        </div>
+
+        <!-- Add Clothing Section -->
+        <div id="add-item" style="display:none;">
+            <h2>Add New Clothing</h2>
+            <form id="clothing-form">
+                <input type="text" id="name" placeholder="Clothing Name" required>
+                <input type="text" id="type" placeholder="Clothing Type" required>
+                <input type="text" id="color" placeholder="Color" required>
+                <input type="text" id="size" placeholder="Size" required>
+                <button type="submit">Add Clothing</button>
+            </form>
+        </div>
+
+        <!-- Clothing List Section -->
+        <div id="clothing-list">
+            <h2>Your Closet</h2>
+            <ul id="items">
+                <!-- Clothing items will be dynamically added here -->
+            </ul>
+        </div>
+
+        <!-- Usage Graph Section -->
+        <div id="usage-graph" style="display:none;">
+            <h2>Clothing Usage Graph</h2>
+            <canvas id="usageCanvas"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
